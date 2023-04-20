@@ -50,12 +50,6 @@ select order_num from order_line
 where quoted_price>500 and quoted_price<1000;
 
 #14
-select s.SaleDate, s.Amount, p.Salesperson, p.Team, pr.Product, g.Region 
-from sales s
-join people p on p.SPID=s.SPID
-join products pr on pr.PID=s.PID
-join geo g on g.GeoID=s.GeoID;
-
 select customer_name, last_name, first_name
 from customer, sales_rep 
 join sales_rep on customer.sales_rep_num=sales_rep.sales_rep_num;
